@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Convertor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Temperature Convertor</h1>
+    </header>
+    <main>
+        <div id="conversion-buttons">
+            <button id="cel-to-fah">Celsius to Fahrenheit</button>
+            <button id="fah-to-cel">Fahrenheit to Celsius</button>
+        </div>
+        
+        <div class="ther-img">
+            <img src="thermometer.webp">
+        </div>
+        <div>
+            <input type="number" name="" id="fahrenheit">
+            <input type="number" name="" id="celsius">
+        </div>
+            
+        <div>
+            <button type="submit" id="f-button">Convert</button>
+            <button type="submit" id="c-button">Convert</button>
+            <h3 id="result"></h3>
+        </div>
+    </main>
+    <script>
+        const cel=document.getElementById('celsius');
+        const far=document.getElementById('fahrenheit');
+        const res=document.getElementById('result');
+        const but=document.getElementById('c-button');
+        const button=document.getElementById('f-button');
+        const ctof=document.getElementById('cel-to-fah');
+        const ftoc=document.getElementById('fah-to-cel');
+        var answer;
+        ctof.addEventListener('click',function(){
+            far.style.display='none';
+            cel.style.display='block';
+            but.style.display='block';
+            button.style.display='none';
+        })
+        ftoc.addEventListener('click',function(){
+            far.style.display='block';
+            cel.style.display='none';
+            but.style.display='none';
+            button.style.display='block';
+        })
+        but.addEventListener('click',function(){
+            var cv = parseFloat(cel.value);
+            answer=1.8*(cv)+32;
+            res.innerText=`${answer} Fahrenheit`;
+        })
+        button.addEventListener('click',function(){
+            var fv = parseFloat(far.value);
+            answer=0.55*(fv)-32;
+            res.innerText=`${answer} Celsius`;
+        })
+    </script>
+</body>
+</html>

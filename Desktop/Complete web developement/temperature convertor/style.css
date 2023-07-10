@@ -1,0 +1,39 @@
+header h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: auto;
+    width: 50%;
+}
+#conversion-buttons{
+    margin: auto;
+    width: 50%;
+}
+#conversion-buttons button{
+    background-color: aquamarine;
+}
+.ther-img{
+    
+    margin: auto;
+    margin-top: 20px;
+    width: 30%;
+}
+.screen{
+    display: flex;
+    flex: wrap;
+}
+
+.ther-img img{
+    height: 350px;
+    width: 350px;
+}
+#f-button{
+    display: none;
+}
+#c-button{
+    display: none;
+}
+#fahrenheit{
+    display: none;
+}
+#celsius{
+    display: none;
+}
